@@ -28,11 +28,6 @@ class ProductController extends AbstractController
         $productModel = new Product();
         $products = $productModel->load($name, $brand, $order, 'ASC', $limit);
 
-        foreach ($products as $key => $product) {
-            $products[$key]['sum_price'] = $product['price'] * $product['quantity'];
-            $products[$key]['sum_reserved_price'] = $product['price'] * $product['reserved'];
-        }
-
         return [
             'title' => 'Products',
             'products' => $products,
