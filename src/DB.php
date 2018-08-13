@@ -16,7 +16,7 @@ final class DB
     {
         if (null === self::$instance) {
             $pdo = new PDO(
-                "mysql:host=" . _DB_SERVER_ . ';port=3306;dbname=' . _DB_NAME_,
+                "mysql:host=" . _DB_SERVER_ . ';port=' . _DB_PORT_ . ';dbname=' . _DB_NAME_,
                 _DB_USER_,
                 _DB_PASSWD_
             );
