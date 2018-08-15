@@ -30,6 +30,6 @@ abstract class AbstractController
         echo $this->twig->render($template, $data);
     }
 
-    abstract protected function getName();
-    abstract protected function getData();
+    abstract function getName();
+    abstract function getData();
 }

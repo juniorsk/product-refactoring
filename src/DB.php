@@ -12,7 +12,7 @@ final class DB
     {
     }
 
-    public static function getInstance()
+    static function getInstance()
     {
         if (null === self::$instance) {
             $pdo = new PDO(

@@ -8,12 +8,12 @@ use App\Model\Product;
 
 class ProductController extends AbstractController
 {
-    protected function getName()
+    function getName()
     {
         return 'product';
     }
 
-    protected function getData()
+    function getData()
     {
         $name = (empty($_GET['name'])) ? '' : $_GET['name'];
         $brand = (empty($_GET['brand'])) ? '' : $_GET['brand'];

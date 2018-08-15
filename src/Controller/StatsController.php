@@ -2,18 +2,21 @@
 
 namespace App\Controller;
 
+use App\Log;
 use App\Model\Brand;
 
 class StatsController extends AbstractController
 {
-    protected function getName()
+    function getName()
     {
         return 'stats';
     }
 
-    protected function getData()
+    function getData()
     {
         $brandModel = new Brand();
+
+        Log::info(sprintf('Rendering stats action.'), $_GET);
 
         return [
             'title' => 'Stats',
